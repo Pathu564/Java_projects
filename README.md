@@ -90,6 +90,20 @@ Once the application is running, follow the console prompts to:
 5. **Check Conflicts:** Automatically check for any task overlaps.
 6. **View Task Status:** See completed and pending tasks.
 
+
+![](Images/img1.png)
+
+![](Images/img2.png)
+
+![](Images/img3.png)
+
+![](Images/img4.png)
+
+![](Images/img5.png)
+
+![](Images/img6.png)
+
+
 ---
 
 ## 🕹️ Subway Surfers Game - Strategy Pattern
