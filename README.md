@@ -75,7 +75,7 @@ Before you begin, ensure you have the following installed:
 
 This project incorporates several design patterns to ensure a scalable and maintainable codebase:
 
-- **Singleton Pattern:** Ensures a single instance of the Task Manager for consistent task management.
+- **Singleton Pattern:** Ensures a single instance of the Schedule Manager for consistent task management.
 - **Observer Pattern:** Used for conflict detection and task status updates.
 - **Factory Pattern:** Simplifies task creation and management.
 
