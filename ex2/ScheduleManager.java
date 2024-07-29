@@ -55,17 +55,28 @@ public class ScheduleManager {
      * @return The result of adding the task.
      */
     public String addTask(Task task) {
+        // Check for conflicts
+        ArrayList<String> conflicts = getConflictingTasks(task);
+        if (conflicts.size() > 0) {
+            notifyObservers(task);
+            // Do not add the task if conflicts are found
+            System.out.println("Task time conflict detected.");
+            System.out.println("Conflicting tasks:");
+            for (String conflict : conflicts) {
+                System.out.println(conflict);
+            }
+            return "Task not added due to conflicts.";
+        }
+
+        // Check if task name already exists
         for (Task existingTask : tasks) {
             if (existingTask.getName().equalsIgnoreCase(task.getName())) {
-                return "Task with this name already exists.";
-            }
-
-            if (task.getStartTime().isBefore(existingTask.getEndTime()) &&
-                task.getEndTime().isAfter(existingTask.getStartTime())) {
-                notifyObservers(task);
-                return "Task time conflict detected.";
+                System.out.println("Task with this name already exists.");
+                return "Task not added due to name conflict.";
             }
         }
+
+        // Add the task
         tasks.add(task);
         return "Task added successfully.";
     }
@@ -94,6 +105,31 @@ public class ScheduleManager {
     public String viewTasks() {
         Collections.sort(tasks, Comparator.comparing(Task::getStartTime));
         return tasks.toString();
+    }
+
+    public boolean taskExists(String name) {
+        for (Task task : tasks) {
+            if (task.getName().equalsIgnoreCase(name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public ArrayList<String> getConflictingTasks(Task newTask) {
+        ArrayList<String> conflicts = new ArrayList<>();
+        for (Task existingTask : tasks) {
+            if (isConflict(existingTask, newTask)) {
+                conflicts.add(existingTask.toString()); // Assuming Task class has a meaningful toString() method
+            }
+        }
+        return conflicts;
+    }
+    
+    private boolean isConflict(Task task1, Task task2) {
+        // Example conflict check logic (you might need to adjust based on your requirements)
+        return task1.getStartTime().compareTo(task2.getEndTime()) < 0 &&
+               task1.getEndTime().compareTo(task2.getStartTime()) > 0;
     }
 
     /**

@@ -99,11 +99,33 @@ public class Main {
         String end = scanner.nextLine();
         System.out.print("Enter priority (High/Medium/Low): ");
         String priority = scanner.nextLine();
-
+    
         Task task = taskFactory.createTask(name, start, end, priority);
         if (task != null) {
-            String result = scheduleManager.addTask(task);
-            System.out.println(result);
+            // Check if the task name already exists
+            if (scheduleManager.taskExists(name)) {
+                System.out.println("Task with this name already exists.");
+                // Optionally, display the conflicting tasks by name
+                System.out.println("Conflicting tasks:");
+                ArrayList<String> conflicts = scheduleManager.getConflictingTasks(task);
+                for (String conflict : conflicts) {
+                    System.out.println(conflict);
+                }
+            } else {
+                // Add the task and check for time conflicts
+                String result = scheduleManager.addTask(task);
+                if (result.startsWith("Task added")) {
+                    System.out.println(result);
+                } else {
+                    // Display conflict information
+                    System.out.println(result);
+                    System.out.println("Conflicting tasks:");
+                    ArrayList<String> conflicts = scheduleManager.getConflictingTasks(task);
+                    for (String conflict : conflicts) {
+                        System.out.println(conflict);
+                    }
+                }
+            }
         }
     }
 
@@ -140,6 +162,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter task name to edit: ");
         String name = scanner.nextLine();
+        if (!scheduleManager.taskExists(name)) {
+            System.out.println("Task not found. Please try again.");
+            return; // Return to the main menu
+        }
         System.out.print("Enter new start time (HH:mm): ");
         String newStart = scanner.nextLine();
         System.out.print("Enter new end time (HH:mm): ");
