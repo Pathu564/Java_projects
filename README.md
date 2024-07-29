@@ -143,6 +143,10 @@ The Subway Surfers Game is a simple console-based game written in Java that demo
 
 - Enter the type of obstacle (train, pillar, coin, platform, sign) or `quit` to end the game.
 
+
+![](pattern/img9.png)
+
+
 ---
 
 ## 🍔 Burger Builder System - Builder Pattern
@@ -162,6 +166,10 @@ This project demonstrates the **Builder Pattern** through a customizable burger 
 1. **Builder Creation:** Set attributes for the burger.
 2. **Burger Construction:** Create a `Burger` object with specified configurations.
 3. **Interactive Menu:** Select burger size and ingredients.
+
+
+![](pattern/img10.png)
+
 
 ### Installation
 
@@ -188,6 +196,9 @@ This project showcases the **Prototype Pattern** for cloning and modifying docum
 1. **Document Creation:** Create initial document prototypes.
 2. **Cloning Documents:** Clone and modify documents.
 3. **Modifying Content:** Update and display cloned documents.
+
+
+![](pattern/img11.png)
 
 ### Installation
 
@@ -216,6 +227,9 @@ This project demonstrates the **Decorator Pattern** for customizing movie ticket
 2. **Add Extras:** Enhance the ticket with additional features.
 3. **Interactive Menu:** Choose extras to add to the ticket.
 
+
+![](pattern/img12.png)
+
 ### Installation
 
 1. **Compile the Code**
@@ -243,6 +257,9 @@ This project demonstrates the **Flyweight Pattern** in a text editor application
 2. **Unique State Handling:** Manage unique attributes.
 3. **Flyweight Factory:** Create and reuse flyweights.
 4. **Document Management:** Efficiently assemble documents.
+
+
+![](pattern/img13.png)
 
 ### Installation
 
@@ -275,6 +292,11 @@ The **Observer Pattern** is a behavioral design pattern where an object (subject
 1. **Subscription Management:** Subscribers can subscribe to or unsubscribe from the YouTube channel. Each subscriber is notified when a new video is uploaded.
 2. **Video Upload:** When a new video is uploaded to the channel, all subscribed users receive a notification with the video title.
 3. **Interactive Menu:** The system provides an interactive menu for the channel owner to perform operations like adding/removing subscribers and uploading new videos.
+
+
+![](pattern/img7.png)
+
+![](pattern/img8.png)
 
 ### How to Run
 
