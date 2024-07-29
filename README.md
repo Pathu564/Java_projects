@@ -84,11 +84,13 @@ This project incorporates several design patterns to ensure a scalable and maint
 Once the application is running, follow the console prompts to:
 
 1. **Add a Task:** Input task details and schedule it.
-2. **View Tasks:** See a list of all current tasks.
+2. **View Tasks:** See a list of all tasks sorted based on start time.
 3. **Update Tasks:** Modify task details as needed.
 4. **Delete Tasks:** Remove tasks from the list.
 5. **Check Conflicts:** Automatically check for any task overlaps.
-6. **View Task Status:** See completed and pending tasks.
+6. **Mark as Completed:** Mark task as Completed.
+7. **View Task Status:** See completed and pending tasks.
+
 
 
 ![](Images/img1.png)
