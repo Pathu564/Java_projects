@@ -1,4 +1,4 @@
-
+## EXERCISE-2
 # 🚀 Astronaut Task Management System
 
 Welcome to the Astronaut Task Management System! This console-based application efficiently manages tasks for astronauts during their missions. It includes features for task creation, scheduling, conflict detection, and reporting.
@@ -128,6 +128,11 @@ Negative Case
 
 ---
 
+## EXERCISE-1
+
+## BEHAVIORAL PATTERN
+      Strategy Pattern
+      Observer Pattern
 ## 🕹️ Subway Surfers Game - Strategy Pattern
 
 ### Overview
@@ -168,8 +173,54 @@ The Subway Surfers Game is a simple console-based game written in Java that demo
 
 ![](pattern/img9.png)
 
+---
+
+## 📺 YouTube Subscription System - Observer Pattern
+
+### Overview
+
+This project demonstrates the implementation of the **Observer Pattern** through a YouTube subscription system. The system allows a YouTube channel to notify its subscribers whenever a new video is uploaded. This pattern is used to manage and notify multiple subscribers efficiently when changes occur.
+
+### Design Pattern: Observer Pattern
+
+The **Observer Pattern** is a behavioral design pattern where an object (subject) maintains a list of its dependents (observers) and notifies them of any state changes. This pattern provides a way to subscribe and unsubscribe observers to be notified of changes in the subject.
+
+### Components
+
+- **Subject:** The `YouTubeChannel` interface defines methods for subscribing, unsubscribing, and notifying observers.
+- **Concrete Subject:** `MyYouTubeChannel` class implements the `YouTubeChannel` interface and maintains a list of subscribers.
+- **Observer:** The `Subscriber` interface defines the method `update` to receive notifications.
+- **Concrete Observer:** `UserSubscriber` class implements the `Subscriber` interface to handle notifications of new videos.
+- **Client:** The `ChannelOwnerMenu` class provides a menu for the channel owner to manage subscribers and upload videos.
+
+### How It Works
+
+1. **Subscription Management:** Subscribers can subscribe to or unsubscribe from the YouTube channel. Each subscriber is notified when a new video is uploaded.
+2. **Video Upload:** When a new video is uploaded to the channel, all subscribed users receive a notification with the video title.
+3. **Interactive Menu:** The system provides an interactive menu for the channel owner to perform operations like adding/removing subscribers and uploading new videos.
+
+
+![](pattern/img7.png)
+
+![](pattern/img8.png)
+
+### How to Run
+
+1. **Compile the Code:** Ensure all Java files are compiled.
+2. **Run the Application:** Start the application to interact with the channel management system.
+3. **Interact with the Menu:** Use the menu to add subscribers, remove them, or upload new videos. Subscribers will receive notifications based on their subscription status.
+
+### Summary
+
+This project showcases the Observer Pattern, where the YouTube channel acts as the subject, and subscribers are the observers.
+
+The channel notifies all its subscribers when a new video is uploaded, illustrating how observers can be managed and notified effectively in a real-world scenario.
+
 
 ---
+## CREATIONAL PATTERN 
+      Builder Pattern
+      Prototype Pattern
 
 ## 🍔 Burger Builder System - Builder Pattern
 
@@ -229,6 +280,10 @@ This project showcases the **Prototype Pattern** for cloning and modifying docum
 3. **Interact with the Menu**
 
 ---
+
+## STRUCTURAL PATTERN
+      Decorator Pattern
+      Flyweight Pattern
 
 ## 🎬 Movie Ticket System - Decorator Pattern
 
@@ -291,46 +346,6 @@ This project demonstrates the **Flyweight Pattern** in a text editor application
 
 ---
 
-## 📺 YouTube Subscription System - Observer Pattern
-
-### Overview
-
-This project demonstrates the implementation of the **Observer Pattern** through a YouTube subscription system. The system allows a YouTube channel to notify its subscribers whenever a new video is uploaded. This pattern is used to manage and notify multiple subscribers efficiently when changes occur.
-
-### Design Pattern: Observer Pattern
-
-The **Observer Pattern** is a behavioral design pattern where an object (subject) maintains a list of its dependents (observers) and notifies them of any state changes. This pattern provides a way to subscribe and unsubscribe observers to be notified of changes in the subject.
-
-### Components
-
-- **Subject:** The `YouTubeChannel` interface defines methods for subscribing, unsubscribing, and notifying observers.
-- **Concrete Subject:** `MyYouTubeChannel` class implements the `YouTubeChannel` interface and maintains a list of subscribers.
-- **Observer:** The `Subscriber` interface defines the method `update` to receive notifications.
-- **Concrete Observer:** `UserSubscriber` class implements the `Subscriber` interface to handle notifications of new videos.
-- **Client:** The `ChannelOwnerMenu` class provides a menu for the channel owner to manage subscribers and upload videos.
-
-### How It Works
-
-1. **Subscription Management:** Subscribers can subscribe to or unsubscribe from the YouTube channel. Each subscriber is notified when a new video is uploaded.
-2. **Video Upload:** When a new video is uploaded to the channel, all subscribed users receive a notification with the video title.
-3. **Interactive Menu:** The system provides an interactive menu for the channel owner to perform operations like adding/removing subscribers and uploading new videos.
-
-
-![](pattern/img7.png)
-
-![](pattern/img8.png)
-
-### How to Run
-
-1. **Compile the Code:** Ensure all Java files are compiled.
-2. **Run the Application:** Start the application to interact with the channel management system.
-3. **Interact with the Menu:** Use the menu to add subscribers, remove them, or upload new videos. Subscribers will receive notifications based on their subscription status.
-
-### Summary
-
-This project showcases the Observer Pattern, where the YouTube channel acts as the subject, and subscribers are the observers
-
-. The channel notifies all its subscribers when a new video is uploaded, illustrating how observers can be managed and notified effectively in a real-world scenario.
 
 ---
 
