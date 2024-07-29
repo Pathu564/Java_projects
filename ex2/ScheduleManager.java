@@ -144,6 +144,24 @@ public class ScheduleManager {
     public String editTask(String name, String newStart, String newEnd, String newPriority) {
         for (Task task : tasks) {
             if (task.getName().equalsIgnoreCase(name)) {
+                // Check for conflicts with other tasks
+                Task updatedTask = new Task(name, newStart, newEnd, newPriority);
+                ArrayList<String> conflicts = getConflictingTasks(updatedTask);
+                if (conflicts.size() > 0) {
+                    System.out.println("Alert: Task '" + name + "' has a time conflict!");
+                    System.out.println("Conflicting tasks:");
+                    for (String conflict : conflicts) {
+                        System.out.println(conflict);
+                    }
+                    return "Task not edited due to conflicts.";
+                }
+    
+                // Check if end time is after start time
+                if (newStart.compareTo(newEnd) >= 0) {
+                    return "End time must be after start time.";
+                }
+    
+                // Update the task details
                 task.setStartTime(newStart);
                 task.setEndTime(newEnd);
                 task.setPriority(newPriority);
