@@ -91,20 +91,40 @@ Once the application is running, follow the console prompts to:
 6. **Mark as Completed:** Mark task as Completed.
 7. **View Task Status:** See completed and pending tasks.
 
+## Add new Task
 
 
 ![](Images/img1.png)
 
 ![](Images/img2.png)
 
-![](Images/img3.png)
+Task Conflict :
 
-![](Images/img4.png)
+![](pattern/img14.png)
+
+Tima invalid:
+
+![](pattern/img15.png)
+
+## Remove Existing Task
+
+Checks both cases 
 
 ![](Images/img5.png)
 
+## View Tasks sorted by Start time
+
 ![](Images/img6.png)
 
+## Edit existing Task
+
+Negative Case
+
+![](pattern/img16.png)
+
+## Mark as Completed, View Completed and Pending Tasks
+
+![](pattern/img16.png)
 
 ---
 
