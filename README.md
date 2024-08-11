@@ -33,7 +33,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Pathu564/Educational_Initiatives.git
+   git clone [https://github.com/Pathu564/Java_projects.git]
    cd astronaut_task_managementsystem
    ```
 
